@@ -20,7 +20,7 @@ var swiper = new Swiper('.mySwiper', {
 function enviarWhatsApp(event) {
     event.preventDefault();
 
-    const nombre = document.getElementById("nombre").value;
+    const nombre =document.getElementById("nombre").value;
     const telefono = document.getElementById("telefono").value;
     const proyecto = document.getElementById("proyecto").value;
     const correo = document.getElementById("correo").value;
