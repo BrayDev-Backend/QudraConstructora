@@ -1,4 +1,4 @@
-/* ===== ESTILOS PARA PÁGINA DE SERVICIOS ===== */
+
 
 .main-servicios {
     padding-top: 30px;
@@ -85,7 +85,7 @@
     text-align: justify;
 }
 
-/* Alternancia de posiciones */
+
 .servicio-item-2 {
     flex-direction: row-reverse;
 }
