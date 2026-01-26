@@ -375,104 +375,32 @@ header {
     margin-bottom: 50px;
 }
 
-/* CONTENEDOR GENERAL */
+/* ===== MISION - VISION - VALORES EN FILA ===== */
 
-#mision-vision {
-    padding: 80px 5%;
-    background-color: #f8f8f8;
-}
+/* ===== FORZAR HORIZONTAL MISION / VISION / VALORES ===== */
 
-/* ENCABEZADO */
-.header-txt {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.header-txt .subtitulo {
-    display: block;
-    color: #f4b400; /* amarillo corporativo */
-    letter-spacing: 3px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.header-txt h1 {
-    font-size: 42px;
-    font-weight: 800;
-    color: #0f172a;
-}
-
-
-/* TARJETAS */
-.card-proposito {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 18px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-proposito:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.10);
-}
-
-/* ICONO */
-.card-proposito .icono {
-    width: 60px;
-    height: 60px;
-    background-color: #f4b400;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
+section.mision-vision > .sobre-nosotros {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 30px;
     justify-content: center;
-    margin-bottom: 20px;
+    align-items: stretch;
+    width: 100%;
 }
 
-.card-proposito .icono img {
-    width: 30px;
-    height: 30px;
+/* cada tarjeta */
+section.mision-vision .contenido-nosotros.card-proposito {
+    flex: 1;
+    max-width: 360px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
 }
 
-/* TÍTULOS */
-.card-proposito h3 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 15px;
-}
 
-/* TEXTO */
-.card-proposito p {
-    font-size: 16px;
-    color: #475569;
-    line-height: 1.7;
-}
-
-/* LISTA DE VALORES */
-.card-proposito ul {
-    padding-left: 18px;
-}
-
-.card-proposito ul li {
-    font-size: 15px;
-    color: #475569;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 991px) {
-    .sobre-nosotros {
-        grid-template-columns: 1fr;
-    }
-
-    .header-txt h1 {
-        font-size: 34px;
-    }
-}
 
 
 .ubicacion-item {
@@ -502,8 +430,13 @@ header {
     margin-bottom: 32px;
 }
 
+:root {
+    --gris-boton: #6b6b6b;
+    --dorado: #f4b400;
+}
+
 .ubicacion-item .btn-1 {
-    background: #f4b400;
+    background: #6b6b6b;   
     color: white;
     width: 100%;
     max-width: 220px;       
@@ -514,11 +447,12 @@ header {
     display: flex;          
     align-items: center;
     justify-content: center;
-    margin-top: 24px;        
+    margin-top: 24px;
+    transition: all 0.3s ease; 
 }
 
 .ubicacion-item .btn-1:hover {
-    background: #f4b400;
+    background: #f4b400;   
     transform: translateY(-5px);
 }
 
@@ -562,7 +496,7 @@ header {
 
 .btn-3 {
     display: inline-block;
-    background: #f4b400;
+    background: #6b6b6b;   /* gris medio */
     color: white;
     padding: 20px 30px;
     text-decoration: none;
@@ -570,13 +504,13 @@ header {
     margin: 30px;
     transition: all 0.3s ease;
     cursor: pointer;
-     font-size: 18px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
 
 .btn-3:hover {
-    background: #f4b400;
+    background: #f4b400;   /* dorado mostaza */
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
@@ -585,6 +519,7 @@ header {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+
 .asesor {
     background: #fff;
     padding: 25px 30px;
@@ -639,15 +574,31 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    background: #6b6b6b;        /* gris medio */
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .btn-4:hover,
 .btn-5:hover,
 .btn-6:hover {
-    color: #ddd;
+    background: #f4b400;        /* dorado mostaza */
+    color: white;
+    transform: translateY(-3px);
 }
 
+/* iconos */
 .sociales-icons img {
     width: 40px;
     height: 40px;
+    transition: transform 0.3s ease;
+}
+
+/* animación del icono */
+.btn-4:hover img,
+.btn-5:hover img,
+.btn-6:hover img {
+    transform: scale(1.1);
 }
