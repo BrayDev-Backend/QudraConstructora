@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -69,6 +70,7 @@ body{
 }
 
 .menu-1{
+    list-style: none;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -119,8 +121,8 @@ body{
 }
 
 .social-icon img{
-     width: 18px;
-    height: 18px;
+     width: 28px;
+    height: 28px;
     object-fit: contain;
 }
 
@@ -178,6 +180,21 @@ display: none;
 .menu-label{
     cursor: pointer;
     display: none;
+}
+.menu-1 ul li a {
+    color: #ffffff; 
+    transition: color 0.3s ease;
+}
+
+
+.menu-1 ul li a.active {
+    color: #FFC107; 
+    font-weight: 600; 
+}
+
+/* Hover */
+.menu-1 ul li a:hover {
+    color: #FFC107;
 }
 
 
@@ -392,6 +409,7 @@ header {
     background: #0056b3;
     transform: translateY(-5px);
 }
+
 
 .form-container {
     max-width: 800px;

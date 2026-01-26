@@ -17,6 +17,7 @@ var swiper = new Swiper('.mySwiper', {
     }
 });
 
+
 function enviarWhatsApp(event) {
     event.preventDefault();
 
