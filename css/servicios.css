@@ -15,15 +15,15 @@
 }
 
 .servicios-header h1 {
-    font-size: 2.8em;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    color: #383839;
+    color: #0f172a;
     font-weight: 700;
 }
 
 .servicios-header p {
-    font-size: 1.2em;
-    color: #666;
+    font-size: 1em;
+    color: #475569;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -72,15 +72,15 @@
 
 .servicio-contenido h2 {
     font-size: 1.8em;
-    color: #383839;
+    color: #0f172a;
     margin-bottom: 20px;
     font-weight: 700;
     line-height: 1.3;
 }
 
 .servicio-contenido p {
-    font-size: 1.05em;
-    color: #555;
+    font-size: 1em;
+    color: #475569;
     line-height: 1.8;
     text-align: justify;
 }

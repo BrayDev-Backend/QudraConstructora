@@ -270,24 +270,29 @@ header {
 
 .header-txt {
     max-width: 900px;
-    
     text-align: center;
     margin-bottom: 0px;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .header-txt h1 {
     margin-bottom: 30px;
     font-size: 2.5em;
-    margin-bottom: 30px;
+    font-weight: 700;
+    color: #0f172a;
 }
 
 .header-txt p {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.7;
+    color: #475569;
 }
 #nosotros {
     margin-top: 90px;
@@ -303,6 +308,10 @@ header {
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .imagen-nosotros img {
@@ -343,15 +352,17 @@ header {
 
 .contenido-nosotros li strong {
     display: block;
-    font-size: 20px;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #0f172a;
     margin: 0;              
 }
 
 
 .contenido-nosotros li p {
     margin: 4px 0 0 0;
-    font-size: 16px;
-    color: #555;
+    font-size: 1em;
+    color: #475569;
 }
 
 .main-menu {
@@ -363,8 +374,10 @@ header {
 }
 
 .main-menu h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
+    font-weight: 700;
+    color: #0f172a;
 }
 
 .botones {
@@ -397,56 +410,25 @@ header {
     margin-bottom: 10px;
 }
 
-.header-txt h1 {
-    font-size: 42px;
-    font-weight: 800;
-    color: #0f172a;
-}
-
-
-/* TARJETAS */
-.card-proposito {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 18px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-proposito:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.10);
-}
-
-/* ICONO */
-.card-proposito .icono {
-    width: 60px;
-    height: 60px;
-    background-color: #f4b400;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.card-proposito .icono img {
-    width: 30px;
-    height: 30px;
-}
-
 /* TÍTULOS */
 .card-proposito h3 {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 15px;
 }
 
+/* ICONO */
+.icono img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
 /* TEXTO */
 .card-proposito p {
-    font-size: 16px;
+    font-size: 1em;
     color: #475569;
     line-height: 1.7;
 }
@@ -478,7 +460,7 @@ header {
 .ubicacion-item {
     background: white;
     border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -488,6 +470,12 @@ header {
     max-width: 300px;
     justify-content: center;
     min-height: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ubicacion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .ubicacion-image {
@@ -497,9 +485,10 @@ header {
 }
 
 .ubicacion-item h2 {
-    font-weight: bold;
-    color: black;
+    font-weight: 700;
+    color: #0f172a;
     margin-bottom: 32px;
+    font-size: 1.5em;
 }
 
 .ubicacion-item .btn-1 {
@@ -524,83 +513,128 @@ header {
 
 
 .form-container {
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
     margin: 0 auto;
-    padding: 32px;
+    padding: 50px 30px;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: none;
 }
 
 .form-container h1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 2.2em;
     font-weight: 700;
-    margin-bottom: 28px;
+    color: #0f172a;
+    margin-bottom: 10px;
 }
 
 .form-container label {
     display: block;
-    font-size: 14px;
+    font-size: 0.9em;
     font-weight: 600;
+    color: #0f172a;
     margin-bottom: 6px;
 }
 
 .form-container input {
     width: 100%;
-    height: 56px;
-    padding: 0 16px;
-    border-radius: 12px;
-    border: 1px solid #dcdcdc;
+    height: 50px;
+    padding: 0 14px;
+    border-radius: 8px;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    background: transparent;
+    transition: border-color 0.3s ease;
 }
 
 .form-container input:focus {
     outline: none;
-    border-color: #f4b400;
-    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+    border-bottom-color: #f4b400;
+    box-shadow: none;
 }
 
 .btn-3 {
-    display: inline-block;
+    display: block;
     background: #f4b400;
     color: white;
-    padding: 20px 30px;
+    padding: 14px 40px;
     text-decoration: none;
-    border-radius: 12px;
-    margin: 30px;
+    border-radius: 8px;
+    margin: 35px auto 0;
     transition: all 0.3s ease;
     cursor: pointer;
-     font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border: none;
+    width: fit-content;
 }
 
 .btn-3:hover {
-    background: #f4b400;
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background: #e0a000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .btn-3:active {
     transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-.asesor {
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    max-width: 420px;
-    text-align: center;
-    margin: 40px auto;
-    
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Subtítulos en formularios */
+.form-container h4 {
+    text-align: center;
+    font-size: 1em;
+    color: #7a8494;
+    font-weight: 400;
+    margin-bottom: 40px;
+    letter-spacing: 0.3px;
+}
+
+.asesor {
+    background: transparent;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: none;
+    max-width: 500px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.asesor h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 30px;
+}
+
+.asesor .linea {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.asesor .linea p {
+    font-size: 1em;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
 .label {
-    background: #c9f5f5;
+    background: transparent;
     padding: 4px 6px;
     border-radius: 4px;
     margin-right: 6px;
+    font-weight: 600;
+    color: #0f172a;
 }
 
 .telefono,
