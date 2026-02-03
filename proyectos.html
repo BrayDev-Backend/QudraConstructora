@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos Qudra</title>
 
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/proyectos.css">
 </head>
 
 <body>
@@ -19,13 +20,13 @@
                  alt="Qudra">
         </a>
 
-    <nav class="nav-menus">
+        <nav class="nav-menus">
             <div class="menu-1">
                 <ul>
                     <li><a href="index.html#inicio">Inicio</a></li>
                     <li><a href="index.html#nosotros">Nosotros</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="proyectos.html" class="active">Proyectos</a></li>
                     <li><a href="politicas.html">Políticas</a></li>
                     <li><a href="index.html#contacto">Contacto</a></li>
                 </ul>
@@ -56,30 +57,289 @@
     </div>
 </header>
 
-<main>
+<main class="main-proyectos">
+    <section class="proyectos-header">
+        <h1>Nuestros Proyectos</h1>
+        <p>Obras civiles de alta calidad que transforman la infraestructura de la región</p>
+    </section>
 
+    <section class="proyectos-container">
+        <!-- PROYECTO 1: Remodelación Parque Centenario (2025 - Actualidad) -->
+        <div class="proyecto-card">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <img src="templates/3.1.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/3.2.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/3.3.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/3.4.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/3.5.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/3.6.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/3.7.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/3.8.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/3.9.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/3.10.jpeg" alt="Parque Centenario" class="carousel-media">
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" onclick="prevSlide(this)">❮</button>
+                <button class="carousel-btn next" onclick="nextSlide(this)">❯</button>
+
+                <div class="carousel-dots">
+                    <!-- Los puntos se generarán con JavaScript -->
+                </div>
+            </div>
+
+            <div class="proyecto-info">
+                <h3>Remodelación Parque Centenario</h3>
+                <p class="proyecto-descripcion">Renovación y mejoramiento del espacio público</p>
+                
+                <div class="proyecto-detalles">
+                    <div class="detalle">
+                        <span class="icono">📍</span>
+                        <span>Ibagué, Tolima</span>
+                    </div>
+                    <div class="detalle">
+                        <span class="icono">📅</span>
+                        <span>2025 / Actualidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTO 2: Cambio de Cubierta USI San Francisco (2025 - Actualidad) -->
+        <div class="proyecto-card">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <img src="templates/4.1.jpeg" alt="USI San Francisco" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/4.2.jpeg" alt="USI San Francisco" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/4.3.jpeg" alt="USI San Francisco" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/4.4.jpeg" alt="USI San Francisco" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/4.5.jpeg" alt="USI San Francisco" class="carousel-media">
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" onclick="prevSlide(this)">❮</button>
+                <button class="carousel-btn next" onclick="nextSlide(this)">❯</button>
+
+                <div class="carousel-dots">
+                    <!-- Los puntos se generarán con JavaScript -->
+                </div>
+            </div>
+
+            <div class="proyecto-info">
+                <h3>Cambio de Cubierta Unidad de Salud</h3>
+                <p class="proyecto-descripcion">USI San Francisco - Remodelación de cobertura</p>
+                
+                <div class="proyecto-detalles">
+                    <div class="detalle">
+                        <span class="icono">📍</span>
+                        <span>Ibagué, Tolima</span>
+                    </div>
+                    <div class="detalle">
+                        <span class="icono">📅</span>
+                        <span>2025 / Actualidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTO 3: Hotel Manila (2025) -->
+        <div class="proyecto-card">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <img src="templates/1.1.jpeg" alt="Hotel Manila" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/1.2.jpeg" alt="Hotel Manila" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <video class="carousel-media carousel-video" muted>
+                            <source src="templates/1.3fix.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="carousel-media carousel-video" muted>
+                            <source src="templates/1.4fix.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" onclick="prevSlide(this)">❮</button>
+                <button class="carousel-btn next" onclick="nextSlide(this)">❯</button>
+
+                <div class="carousel-dots">
+                    <!-- Los puntos se generarán con JavaScript -->
+                </div>
+            </div>
+
+            <div class="proyecto-info">
+                <h3>Hotel Manila</h3>
+                <p class="proyecto-descripcion">Remodelación y adecuación de terraza a suits</p>
+                
+                <div class="proyecto-detalles">
+                    <div class="detalle">
+                        <span class="icono">📍</span>
+                        <span>Medellín, Antioquia</span>
+                    </div>
+                    <div class="detalle">
+                        <span class="icono">📅</span>
+                        <span>2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTO 4: Autopista Río Magdalena (2022) -->
+        <div class="proyecto-card">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <img src="templates/2.1.jpeg" alt="Autopista Río Magdalena" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/2.2.jpeg" alt="Autopista Río Magdalena" class="carousel-media">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="templates/2.3.jpeg" alt="Autopista Río Magdalena" class="carousel-media">
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" onclick="prevSlide(this)">❮</button>
+                <button class="carousel-btn next" onclick="nextSlide(this)">❯</button>
+
+                <div class="carousel-dots">
+                    <!-- Los puntos se generarán con JavaScript -->
+                </div>
+            </div>
+
+            <div class="proyecto-info">
+                <h3>Autopista Río Magdalena</h3>
+                <p class="proyecto-descripcion">Supervisión técnica</p>
+                
+                <div class="proyecto-detalles">
+                    <div class="detalle">
+                        <span class="icono">📍</span>
+                        <span>Vegachi, Antioquia</span>
+                    </div>
+                    <div class="detalle">
+                        <span class="icono">📅</span>
+                        <span>2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTROS PROYECTOS -->
+    <section class="otros-proyectos">
+        <h2>Otros Proyectos Realizados</h2>
+        
+        <div class="otros-proyectos-grid">
+            <div class="otro-proyecto">
+                <div class="proyecto-numero">01</div>
+                <h4>Instalación de Cubierta</h4>
+                <p>Colocación de teja traslúcida para proyecto residencial</p>
+                <div class="ubicacion-año">
+                    <span>Rionegro, Antioquia</span>
+                    <span>2025</span>
+                </div>
+            </div>
+
+            <div class="otro-proyecto">
+                <div class="proyecto-numero">02</div>
+                <h4>Construcción de Filtros Franceses</h4>
+                <p>Filtros tipo francés perimetrales en edificio residencial</p>
+                <div class="ubicacion-año">
+                    <span>Envigado, Antioquia</span>
+                    <span>2024</span>
+                </div>
+            </div>
+
+            <div class="otro-proyecto">
+                <div class="proyecto-numero">03</div>
+                <h4>Casa Tipo Campestre</h4>
+                <p>Construcción de vivienda unifamiliar con diseño campestre</p>
+                <div class="ubicacion-año">
+                    <span>Envigado, Antioquia</span>
+                    <span>2023</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION VER MAS -->
+    <section class="ver-mas-section">
+        <h2>Ver Más Proyectos</h2>
+        <p>Explora nuestro completo portafolio de obras realizadas con éxito en toda la región</p>
+        <button class="btn-ver-mas" onclick="abrirModalProyectos()">Ver Todos los Proyectos</button>
+    </section>
+
+    <section class="contacto-proyectos">
+        <h2>¿Tienes un Proyecto?</h2>
+        <p>Contáctanos y transformemos tu idea en realidad</p>
+        <a href="index.html#contacto" class="btn-contacto">Solicitar Asesoría</a>
+    </section>
+</main>
+
+<!-- MODAL PARA VER TODOS LOS PROYECTOS -->
+<div id="modalTodosProyectos" class="modal-todos-proyectos">
+    <div class="modal-content">
+        <button class="modal-close" onclick="cerrarModalProyectos()">&times;</button>
+        <h2>Todos Nuestros Proyectos</h2>
+        <div class="todos-proyectos-grid" id="todosProyectosGrid">
+            <!-- Los proyectos se cargarán aquí con JavaScript -->
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
     <h2>Síguenos en redes sociales</h2>
 
     <div class="sociales-icons">
         <a href="https://www.facebook.com/p/Qudra-Constructora-61578352345416/" target="_blank">
             <img src="imagenes/facebook_185981.png" alt="Facebook">
         </a>
-
         <a href="https://wa.me/573042271498" target="_blank">
             <img src="imagenes/whatsapp_185988.png" alt="WhatsApp">
         </a>
-
         <a href="https://www.instagram.com/qudraco_sas/" target="_blank">
             <img src="imagenes/social-media_15789364.png" alt="Instagram">
         </a>
     </div>
 
-</main>
-
-<footer>
-    <p>&copy; 2024 Qudra Constructora. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Qudra Constructora. Todos los derechos reservados.</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="script.JS"></script>
 </body>
 </html>

@@ -1,0 +1,191 @@
+<!-- EJEMPLO COMPLETO DE PROYECTO CON CARRUSEL -->
+<!-- Copia este código si quieres agregar un proyecto nuevo o reemplazar uno existente -->
+
+<div class="proyecto-card">
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Slide 1: Imagen -->
+            <div class="carousel-item active" data-index="0">
+                <img src="imagenes/proyecto-foto-1.jpg" alt="Vista general del proyecto" class="carousel-media">
+            </div>
+            
+            <!-- Slide 2: Imagen -->
+            <div class="carousel-item" data-index="1">
+                <img src="imagenes/proyecto-foto-2.jpg" alt="Detalle de construcción" class="carousel-media">
+            </div>
+            
+            <!-- Slide 3: Video -->
+            <div class="carousel-item" data-index="2">
+                <video class="carousel-media" controls>
+                    <source src="imagenes/proyecto-video.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5
+                </video>
+            </div>
+            
+            <!-- Slide 4: Imagen -->
+            <div class="carousel-item" data-index="3">
+                <img src="imagenes/proyecto-foto-3.jpg" alt="Resultado final" class="carousel-media">
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <button class="carousel-btn prev" onclick="prevSlide(this)">❮</button>
+        <button class="carousel-btn next" onclick="nextSlide(this)">❯</button>
+
+        <!-- Indicadores de puntos (se crean automáticamente con JavaScript) -->
+        <div class="carousel-dots"></div>
+    </div>
+
+    <!-- Información del proyecto -->
+    <div class="proyecto-info">
+        <h3>Nombre del Proyecto</h3>
+        <p class="proyecto-descripcion">Descripción breve del proyecto y lo que se hizo</p>
+        
+        <div class="proyecto-detalles">
+            <div class="detalle">
+                <span class="icono">📍</span>
+                <span>Ciudad, Departamento</span>
+            </div>
+            <div class="detalle">
+                <span class="icono">📅</span>
+                <span>2025</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================================ -->
+<!-- EXPLICACIÓN LÍNEA POR LÍNEA -->
+<!-- ============================================ -->
+
+<!--
+1. <div class="proyecto-card">
+   → Contenedor principal de la tarjeta del proyecto
+
+2. <div class="carousel-container">
+   → Contenedor del carrusel
+
+3. <div class="carousel">
+   → Lugar donde irán todas las imágenes y videos
+
+4. <div class="carousel-item active">
+   → Cada slide (imagen o video)
+   → "active" debe estar solo en el primero
+   → data-index debe ser 0, 1, 2, etc. en orden
+
+5. <img src="imagenes/..." class="carousel-media">
+   → Para imágenes: usa IMG
+   → src debe apuntar a la ruta correcta
+
+6. <video class="carousel-media" controls>
+   → Para videos: usa VIDEO
+   → controls muestra los botones play/pause
+   → <source src="..."> especifica la ruta y formato
+
+7. <button class="carousel-btn prev/next">
+   → Botones para navegar
+   → No cambies el onclick="prevSlide(this)"
+
+8. <div class="carousel-dots"></div>
+   → Los puntos se crean automáticamente con JS
+   → No necesitas agregar nada aquí
+
+9. <div class="proyecto-info">
+   → Información del proyecto (títylo, descripción, etc.)
+-->
+
+
+<!-- ============================================ -->
+<!-- EJEMPLO RÁPIDO: SOLO IMÁGENES -->
+<!-- ============================================ -->
+
+<div class="proyecto-card">
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item active" data-index="0">
+                <img src="imagenes/imagen-1.jpg" alt="Foto 1" class="carousel-media">
+            </div>
+            <div class="carousel-item" data-index="1">
+                <img src="imagenes/imagen-2.jpg" alt="Foto 2" class="carousel-media">
+            </div>
+            <div class="carousel-item" data-index="2">
+                <img src="imagenes/imagen-3.jpg" alt="Foto 3" class="carousel-media">
+            </div>
+        </div>
+        <button class="carousel-btn prev" onclick="prevSlide(this)">❮</button>
+        <button class="carousel-btn next" onclick="nextSlide(this)">❯</button>
+        <div class="carousel-dots"></div>
+    </div>
+    <div class="proyecto-info">
+        <h3>Nombre Proyecto</h3>
+        <p class="proyecto-descripcion">Descripción</p>
+        <div class="proyecto-detalles">
+            <div class="detalle"><span class="icono">📍</span><span>Ubicación</span></div>
+            <div class="detalle"><span class="icono">📅</span><span>Año</span></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================================ -->
+<!-- ERRORES COMUNES A EVITAR -->
+<!-- ============================================ -->
+
+<!-- ❌ MAL: active en múltiples items -->
+<div class="carousel">
+    <div class="carousel-item active">...</div>
+    <div class="carousel-item active">...</div>  <!-- ❌ MALO! Solo uno debe tener active -->
+</div>
+
+<!-- ✅ BIEN: active solo en el primero -->
+<div class="carousel">
+    <div class="carousel-item active">...</div>
+    <div class="carousel-item">...</div>
+</div>
+
+<!-- ❌ MAL: src incorrecto -->
+<img src="imagenes/mi imagen.jpg">  <!-- ❌ Espacio en el nombre -->
+<img src="imagenes/imagen.JPG">     <!-- ❌ Mayúsculas incorrectas -->
+<img src="imagen.jpg">              <!-- ❌ Sin carpeta /imagenes/ -->
+
+<!-- ✅ BIEN: src correcto -->
+<img src="imagenes/mi-imagen.jpg">  <!-- ✅ Guión en lugar de espacio -->
+<img src="imagenes/imagen.jpg">     <!-- ✅ Minúsculas y carpeta correcta -->
+
+<!-- ❌ MAL: data-index no secuencial -->
+<div class="carousel-item active" data-index="0">...</div>
+<div class="carousel-item" data-index="2">...</div>  <!-- ❌ Falta el 1 -->
+
+<!-- ✅ BIEN: data-index secuencial -->
+<div class="carousel-item active" data-index="0">...</div>
+<div class="carousel-item" data-index="1">...</div>
+<div class="carousel-item" data-index="2">...</div>
+
+
+<!-- ============================================ -->
+<!-- TIPS ÚTILES -->
+<!-- ============================================ -->
+
+<!-- Para videos sin controles (autoplay silencioso) -->
+<video class="carousel-media" autoplay muted loop>
+    <source src="imagenes/video.mp4" type="video/mp4">
+</video>
+
+<!-- Para videos con controles (requiere user interaction) -->
+<video class="carousel-media" controls>
+    <source src="imagenes/video.mp4" type="video/mp4">
+</video>
+
+<!-- Para múltiples formatos de video (mejor compatibilidad) -->
+<video class="carousel-media" controls>
+    <source src="imagenes/video.mp4" type="video/mp4">
+    <source src="imagenes/video.webm" type="video/webm">
+    Tu navegador no soporta videos HTML5
+</video>
+
+<!-- Imágenes responsivas (si quieres) -->
+<img srcset="imagenes/imagen-small.jpg 480w, imagenes/imagen-large.jpg 1200w" 
+     src="imagenes/imagen.jpg" 
+     alt="Descripción"
+     class="carousel-media">
