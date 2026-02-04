@@ -96,7 +96,7 @@ var todosLosProyectos = [
         imagen: 'templates/2.1.jpeg'
     },
     {
-        nombre: 'Construcción de Filtros Franceses',
+        nombre: 'Construcción de Filtro Tipo Frances',
         descripcion: 'Filtros tipo francés perimetrales en edificio residencial',
         ubicacion: 'Envigado, Antioquia',
         año: '2024',
