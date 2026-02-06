@@ -844,3 +844,557 @@ header {
 .btn-6:hover img {
     transform: scale(1.1);
 }
+/* ===== MENSAJE DE ÉXITO FLOTANTE ===== */
+.mensaje-exito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInBackdrop 0.3s ease;
+}
+
+.mensaje-exito.activo {
+    display: flex;
+}
+
+@keyframes fadeInBackdrop {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.mensaje-exito-contenido {
+    background: white;
+    border-radius: 20px;
+    padding: 50px 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mensaje-exito-icono {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #f4b400 0%, #e0a000 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(244, 180, 0, 0.3);
+}
+
+.mensaje-exito-icono svg {
+    animation: checkAnimation 0.6s ease 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes checkAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-45deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.mensaje-exito-contenido h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mensaje-exito-contenido p {
+    font-size: 16px;
+    color: #475569;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boton-cerrar-mensaje {
+    background: linear-gradient(135deg, #f4b400 0%, #e0a000 100%);
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.boton-cerrar-mensaje:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(244, 180, 0, 0.3);
+}
+
+.boton-cerrar-mensaje:active {
+    transform: translateY(0);
+}
+
+/* ===== MENÚ HAMBURGUESA ===== */
+#menu-toggle {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-label {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 101;
+    padding: 10px;
+}
+
+.hamburger {
+    width: 28px;
+    height: 2.5px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background: white;
+    border-radius: 2px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Animación cuando el checkbox está activo */
+#menu-toggle:checked ~ .menu-label .hamburger {
+    background: transparent;
+}
+
+#menu-toggle:checked ~ .menu-label .hamburger::before {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+#menu-toggle:checked ~ .menu-label .hamburger::after {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Mostrar menú en móviles */
+#menu-toggle:checked ~ .nav-menus {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(40, 40, 40, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 20px 0;
+    z-index: 99;
+}
+
+#menu-toggle:checked ~ .nav-menus .menu-1 {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    flex: none;
+    margin: 0;
+    order: 0;
+}
+
+#menu-toggle:checked ~ .nav-menus .menu-1 ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+#menu-toggle:checked ~ .nav-menus .menu-1 ul li {
+    width: 100%;
+    text-align: left;
+}
+
+#menu-toggle:checked ~ .nav-menus .menu-1 ul li a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#menu-toggle:checked ~ .nav-menus .menu-2 {
+    order: 1;
+    margin: 20px 0 0 0;
+}
+
+/* ===== MEDIA QUERIES RESPONSIVE ===== */
+
+/* Tablets y pantallas medianas (768px - 1024px) */
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px 20px;
+    }
+
+    .mision-vision-valores-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .card-proposito {
+        padding: 40px 25px;
+    }
+
+    .swiper-slide {
+        width: 250px;
+        height: 350px;
+    }
+
+    .swiper-slide img {
+        height: 350px;
+    }
+}
+
+/* Tablets y móviles grandes (768px) */
+@media (max-width: 768px) {
+    /* Menú */
+    .menu {
+        padding: 10px 15px;
+        border-radius: 0;
+    }
+
+    .menu-label {
+        display: flex;
+    }
+
+    .logo-2 {
+        height: 80px;
+        max-height: 80px;
+    }
+
+    .nav-menus {
+        display: none;
+    }
+
+    header {
+        padding-top: 110px;
+    }
+
+    /* Carrusel */
+    .swiper {
+        margin-top: 30px;
+    }
+
+    .swiper-slide {
+        width: 200px;
+        height: 280px;
+        margin-bottom: 40px;
+    }
+
+    .swiper-slide img {
+        height: 280px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    /* Contenido Header */
+    .header-content {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 15px;
+        max-width: 100%;
+    }
+
+    .header-txt {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .header-txt h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .header-txt p {
+        font-size: 0.95em;
+        margin-bottom: 15px;
+    }
+
+    /* Sobre nosotros */
+    .sobre-nosotros {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .imagen-nosotros img {
+        height: 300px;
+    }
+
+    .contenido-nosotros li {
+        gap: 10px;
+    }
+
+    .contenido-nosotros li strong {
+        font-size: 1em;
+    }
+
+    .contenido-nosotros li p {
+        font-size: 0.9em;
+    }
+
+    /* Misión, Visión, Valores */
+    .mision-vision {
+        margin-top: 0;
+    }
+
+    .mision-vision-valores-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+        margin-top: 30px;
+    }
+
+    .card-proposito {
+        padding: 30px 20px;
+    }
+
+    .card-proposito h3 {
+        font-size: 22px;
+    }
+
+    .card-proposito p,
+    .card-proposito li {
+        font-size: 0.95em;
+    }
+
+    /* Ubicación */
+    .main-menu {
+        padding: 20px 15px 0;
+    }
+
+    .main-menu h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .ubicacion-item {
+        max-width: 100%;
+        padding: 25px 20px;
+        min-height: 250px;
+    }
+
+    /* Formulario */
+    .form-container {
+        max-width: 100%;
+        padding: 30px 15px;
+        margin-top: 80px !important;
+    }
+
+    .form-container h1 {
+        font-size: 1.8em;
+    }
+
+    .form-container h4 {
+        font-size: 1em;
+    }
+
+    .form-container input {
+        height: 45px;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .btn-1,
+    .btn-3 {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    /* Mensaje éxito */
+    .mensaje-exito-contenido {
+        padding: 40px 30px;
+        margin: 20px;
+    }
+    
+    .mensaje-exito-contenido h2 {
+        font-size: 24px;
+    }
+    
+    .mensaje-exito-contenido p {
+        font-size: 14px;
+    }
+
+    /* Asesor / Contacto */
+    .asesor {
+        padding: 30px 15px;
+    }
+
+    .asesor h2 {
+        font-size: 1.8em;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer h2 {
+        font-size: 1.6em;
+    }
+
+    .sociales-icons {
+        gap: 15px;
+    }
+
+    .sociales-icons img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Móviles pequeños (480px) */
+@media (max-width: 480px) {
+    .menu {
+        padding: 8px 10px;
+    }
+
+    .logo-2 {
+        height: 70px;
+        max-height: 70px;
+    }
+
+    header {
+        padding-top: 90px;
+    }
+
+    .swiper-slide {
+        width: 160px;
+        height: 230px;
+        margin-bottom: 30px;
+    }
+
+    .swiper-slide img {
+        height: 230px;
+    }
+
+    .header-txt {
+        padding: 20px 15px;
+    }
+
+    .header-txt h1 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    .header-txt p {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    .main-menu h1 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+
+    .mision-vision-valores-container {
+        gap: 15px;
+    }
+
+    .card-proposito {
+        padding: 25px 15px;
+    }
+
+    .card-proposito h3 {
+        font-size: 18px;
+    }
+
+    .card-proposito p,
+    .card-proposito li {
+        font-size: 0.9em;
+    }
+
+    .form-container {
+        padding: 20px 10px;
+        margin-top: 60px !important;
+    }
+
+    .form-container h1 {
+        font-size: 1.5em;
+    }
+
+    .form-container h4 {
+        font-size: 0.95em;
+    }
+
+    .form-container label {
+        font-size: 0.85em;
+    }
+
+    .form-container input {
+        height: 40px;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .btn-1,
+    .btn-3 {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .asesor h2 {
+        font-size: 1.4em;
+    }
+
+    .asesor .linea p {
+        flex-direction: column;
+        font-size: 0.9em;
+    }
+
+    .footer h2 {
+        font-size: 1.4em;
+    }
+}

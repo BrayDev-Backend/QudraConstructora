@@ -133,3 +133,149 @@
     height: 50px;
 }
 
+/* ===== MEDIA QUERIES SERVICIOS ===== */
+
+/* Tablets (1024px) */
+@media (max-width: 1024px) {
+    .servicios-header h1 {
+        font-size: 2em;
+    }
+
+    .servicio-item {
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .servicio-imagen {
+        max-width: 350px;
+    }
+
+    .servicio-contenido h2 {
+        font-size: 1.6em;
+    }
+
+    .servicio-contenido p {
+        font-size: 0.95em;
+    }
+}
+
+/* Tablets medianos (768px) */
+@media (max-width: 768px) {
+    .servicios-header {
+        padding: 60px 15px 40px;
+    }
+
+    .servicios-header h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .servicios-header p {
+        font-size: 0.95em;
+    }
+
+    .servicios-container {
+        padding: 0 15px 40px;
+    }
+
+    .servicio-item {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .servicio-item-2,
+    .servicio-item-4 {
+        flex-direction: column;
+    }
+
+    .servicio-imagen {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .servicio-contenido {
+        min-width: 100%;
+    }
+
+    .servicio-contenido h2 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    .servicio-contenido p {
+        font-size: 0.95em;
+        line-height: 1.6;
+    }
+
+    .footer {
+        padding: 30px 15px 20px;
+    }
+
+    .footer h2 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .sociales-icons {
+        gap: 15px;
+    }
+
+    .sociales-icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Móviles pequeños (480px) */
+@media (max-width: 480px) {
+    .main-servicios {
+        padding-top: 20px;
+    }
+
+    .servicios-header {
+        padding: 40px 10px 30px;
+    }
+
+    .servicios-header h1 {
+        font-size: 1.5em;
+    }
+
+    .servicios-header p {
+        font-size: 0.9em;
+    }
+
+    .servicios-container {
+        padding: 0 10px 30px;
+    }
+
+    .servicio-item {
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .servicio-imagen {
+        max-width: 100%;
+    }
+
+    .servicio-contenido h2 {
+        font-size: 1.2em;
+    }
+
+    .servicio-contenido p {
+        font-size: 0.9em;
+    }
+
+    .footer {
+        padding: 20px 10px 15px;
+    }
+
+    .footer h2 {
+        font-size: 1.1em;
+    }
+
+    .sociales-icons img {
+        width: 35px;
+        height: 35px;
+    }
+}

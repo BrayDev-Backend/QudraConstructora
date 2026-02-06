@@ -684,3 +684,135 @@
         height: 8px;
     }
 }
+/* ===== MEDIA QUERIES ADICIONALES PROYECTOS ===== */
+
+/* Tablets (1024px) */
+@media (max-width: 1024px) {
+    .main-proyectos {
+        padding-top: 80px;
+    }
+
+    .proyectos-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .carousel-container {
+        height: 300px;
+    }
+
+    .proyecto-card {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Tablets medianos (768px) */
+@media (max-width: 768px) {
+    .main-proyectos {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .proyectos-header {
+        margin-bottom: 50px;
+        padding: 20px 15px;
+    }
+
+    .proyectos-header h1 {
+        font-size: 1.8em;
+    }
+
+    .proyectos-header p {
+        font-size: 1em;
+    }
+
+    .proyectos-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 60px;
+        padding: 0 15px;
+    }
+
+    .carousel-container {
+        height: 280px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .proyecto-info {
+        padding: 20px;
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.3em;
+    }
+
+    .proyecto-info p {
+        font-size: 0.95em;
+    }
+
+    .ubicacion-label {
+        font-size: 0.9em;
+    }
+
+    .año-label {
+        font-size: 0.9em;
+    }
+}
+
+/* Móviles pequeños (480px) */
+@media (max-width: 480px) {
+    .main-proyectos {
+        padding-top: 50px;
+    }
+
+    .proyectos-header {
+        margin-bottom: 30px;
+        padding: 15px 10px;
+    }
+
+    .proyectos-header h1 {
+        font-size: 1.5em;
+    }
+
+    .proyectos-header p {
+        font-size: 0.95em;
+    }
+
+    .proyectos-container {
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    .carousel-container {
+        height: 220px;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .proyecto-info {
+        padding: 15px;
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .proyecto-info p {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+
+    .ubicacion-label,
+    .año-label {
+        font-size: 0.85em;
+    }
+}

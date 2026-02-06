@@ -16,6 +16,11 @@
             <img class= "logo-2 " src="imagenes/logo_qudra-fotor-bg-remover-20260115212314.png" class="logo qudra" alt="Qudra">
         </a>
 
+        <!-- Botón hamburguesa -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-label">
+            <span class="hamburger"></span>
+        </label>
 
         <nav class="nav-menus">
            <div class="menu-1">
@@ -241,6 +246,20 @@
                 <button class="btn-3" type="submit">Requerir asesoría</button>
             </form>
   </div>
+
+<!-- Mensaje de éxito flotante -->
+<div id="mensajeExito" class="mensaje-exito">
+    <div class="mensaje-exito-contenido">
+        <div class="mensaje-exito-icono">
+            <svg viewBox="0 0 24 24" width="60" height="60" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+        <h2>¡Envío Exitoso!</h2>
+        <p>Tu solicitud ha sido enviada correctamente. Nos comunicaremos contigo pronto.</p>
+        <button class="boton-cerrar-mensaje" onclick="cerrarMensajeExito()">Cerrar</button>
+    </div>
+</div>
 
  
 

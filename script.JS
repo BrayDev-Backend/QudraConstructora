@@ -1,3 +1,27 @@
+// ===== MENÚ HAMBURGUESA =====
+// Cerrar menú cuando se hace clic en un enlace
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuLinks = document.querySelectorAll('.menu-1 ul li a, .menu-2 a');
+    
+    // Cerrar menú al hacer clic en cualquier enlace
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (menuToggle) {
+                menuToggle.checked = false;
+            }
+        });
+    });
+
+    // Cerrar menú al hacer clic fuera de él
+    document.addEventListener('click', function(event) {
+        const menu = document.querySelector('.menu');
+        if (menu && !menu.contains(event.target) && menuToggle && menuToggle.checked) {
+            menuToggle.checked = false;
+        }
+    });
+});
+
 // Detectar sección activa y actualizar menú basado en scroll
 function inicializarMenuActivo() {
     const enlaces = document.querySelectorAll('.menu-1 ul li a');
@@ -156,9 +180,32 @@ Tipo de proyecto: ${proyecto}`;
 
     const numeroWhatsApp = "573042271498";
 
-    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    // Mostrar mensaje de éxito
+    mostrarMensajeExito();
 
-    window.open(url, "_blank");
+    // Limpiar el formulario
+    document.querySelector('form').reset();
+
+    // Redirigir a WhatsApp después de 2 segundos
+    setTimeout(() => {
+        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, "_blank");
+    }, 2000);
+}
+
+function mostrarMensajeExito() {
+    const mensaje = document.getElementById("mensajeExito");
+    mensaje.classList.add("activo");
+    
+    // Auto-cerrar después de 4 segundos
+    setTimeout(() => {
+        cerrarMensajeExito();
+    }, 4000);
+}
+
+function cerrarMensajeExito() {
+    const mensaje = document.getElementById("mensajeExito");
+    mensaje.classList.remove("activo");
 }
 
 // ===== CARRUSEL PARA PROYECTOS =====
