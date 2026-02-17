@@ -414,3 +414,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Bind form submit and close button without inline handlers
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    if (form) form.addEventListener('submit', enviarWhatsApp);
+    const cerrarBtn = document.querySelector('.boton-cerrar-mensaje');
+    if (cerrarBtn) cerrarBtn.addEventListener('click', cerrarMensajeExito);
+});

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Icono Valores">
+  <rect x="8" y="8" width="104" height="104" rx="16" fill="#f3b300"/>
+  <g stroke="#000" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left person -->
+    <circle cx="40" cy="44" r="7" />
+    <path d="M30 62 C30 56, 50 56, 50 62" />
+    <!-- Right person -->
+    <circle cx="80" cy="44" r="7" />
+    <path d="M70 62 C70 56, 90 56, 90 62" />
+    <!-- Center person (slightly behind) -->
+    <circle cx="60" cy="66" r="6" />
+    <path d="M52 78 C52 72, 68 72, 68 78" />
+  </g>
+</svg>

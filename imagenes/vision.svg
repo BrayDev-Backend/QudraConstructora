@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Icono Visión">
+  <rect x="8" y="8" width="104" height="104" rx="16" fill="#f3b300"/>
+  <g fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M26 60 C38 42, 82 42, 94 60 C82 78, 38 78, 26 60 Z" />
+    <circle cx="60" cy="60" r="10" fill="#000" stroke="none" />
+    <circle cx="60" cy="60" r="18" fill="none" stroke="#000" stroke-opacity="0.12" />
+  </g>
+</svg>

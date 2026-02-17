@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Icono Misión">
+  <rect x="8" y="8" width="104" height="104" rx="16" fill="#f3b300"/>
+  <g stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="44" y1="34" x2="44" y2="86" />
+    <path d="M44 36 L78 46 L44 56" />
+    <path d="M44 52 L74 62 L44 72" opacity="0.14" />
+  </g>
+</svg>

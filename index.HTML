@@ -3,10 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qudra Constructora</title>
+        <title>Qudra Constructora</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">  
-    <link rel="stylesheet" href="css/style.CSS">
+        <meta name="description" content="Qudra Constructora SAS - Ingeniería civil y arquitectura. Servicios de construcción, remodelación y supervisión en Valle de Aburrá e Ibagué, Tolima.">
+        <meta name="keywords" content="constructora, construcción, ingeniería civil, arquitectura, remodelación, proyectos, Valle de Aburrá, Ibagué">
+        <meta name="author" content="Qudra Constructora SAS">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="index.html">
+
+        <!-- Open Graph / Social -->
+        <meta property="og:site_name" content="Qudra Constructora">
+        <meta property="og:title" content="Qudra Constructora - Ingeniería civil y arquitectura">
+        <meta property="og:description" content="Soluciones integrales en construcción, ingeniería y arquitectura en Colombia.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="imagenes/quienessomos2.jpeg">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Qudra Constructora">
+        <meta name="twitter:description" content="Soluciones integrales en construcción y supervisión de proyectos.">
+
+        <!-- Content Security Policy (meta). Review and move to server headers for production. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://wa.me https://api.whatsapp.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">  
+        <link rel="stylesheet" href="css/style.CSS">
+
+        <!-- Structured Data: LocalBusiness (Construction) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Qudra Constructora SAS",
+            "image": "imagenes/quienessomos2.jpeg",
+            "@id": "",
+            "url": "",
+            "telephone": "+573042271498",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Medellín / Ibagué",
+                "addressCountry": "CO"
+            },
+            "description": "Empresa colombiana especializada en ingeniería civil y arquitectura, con servicios integrales de construcción y supervisión de proyectos.",
+            "areaServed": ["Valle de Aburrá","Ibagué"]
+        }
+        </script>
 </head>
 <body>
 
@@ -157,7 +198,7 @@
 
             <div class="contenido-msv card-proposito">
                 <div class="icono">
-                    <img src="imagenes/mision.png" alt="">
+                    <img src="imagenes/mision.svg" alt="">
                 </div>
                 <h3>Misión</h3>
                 <p>
@@ -168,7 +209,7 @@
 
             <div class="contenido-nmsv card-proposito">
                 <div class="icono">
-                    <img src="imagenes/vision.png" alt="">
+                    <img src="imagenes/vision.svg" alt="">
                 </div>
                 <h3>Visión</h3>
                 <p>
@@ -178,7 +219,7 @@
             </div>
             <div class="contenido-msv card-proposito">
                 <div class="icono">
-                    <img src="imagenes/valores.png" alt="">
+                    <img src="imagenes/valores.svg" alt="">
                 </div>
                 <h3>Valores</h3>
             <ul>
@@ -223,7 +264,7 @@
         
         <h4>Estamos listos para convertir tu proyecto en realidad</h4>
 
-            <form onsubmit="enviarWhatsApp(event)">
+            <form id="contactForm">
                 <div class="form-group">
                     <label>Nombre completo</label>
                     <input type="text" id="nombre" required>
@@ -258,7 +299,7 @@
         </div>
         <h2>¡Envío Exitoso!</h2>
         <p>Tu solicitud ha sido enviada correctamente. Nos comunicaremos contigo pronto.</p>
-        <button class="boton-cerrar-mensaje" onclick="cerrarMensajeExito()">Cerrar</button>
+        <button class="boton-cerrar-mensaje">Cerrar</button>
     </div>
 </div>
 

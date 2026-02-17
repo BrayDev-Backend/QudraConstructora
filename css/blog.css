@@ -64,7 +64,7 @@
 }
 
 .blog-post:hover h2 {
-    color: #C9A227;
+    color: var(--dorado, #f4b400);
 }
 
 .blog-post p {
@@ -79,7 +79,7 @@
 /* ===== READ MORE BUTTON ===== */
 .read-more {
     display: inline-block;
-    background: #C9A227;
+    background: var(--dorado, #f4b400);
     color: white;
     padding: 12px 30px;
     border-radius: 8px;
@@ -88,15 +88,15 @@
     font-size: 0.9em;
     margin: 0 30px 30px;
     transition: all 0.3s ease;
-    border: 2px solid #C9A227;
+    border: 2px solid var(--dorado, #f4b400);
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .read-more:hover {
-    background: #e0a000;
-    border-color: #e0a000;
+    background: var(--dorado-dark, #e0a000);
+    border-color: var(--dorado-dark, #e0a000);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(201, 162, 39, 0.3);
 }

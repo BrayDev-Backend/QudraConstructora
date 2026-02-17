@@ -572,13 +572,14 @@ header {
 :root {
     --gris-boton: #6b6b6b;
     --dorado: #f4b400;
+    --dorado-dark: #e0a000;
 }
 
 .ubicacion-item .btn-1 {
     display: inline-block;
     background: #6b6b6b;  
     display: block;
-    background: #f4b400;
+    background: var(--dorado);
     color: white;
     padding: 14px 40px;
     text-decoration: none;
@@ -591,22 +592,14 @@ header {
     letter-spacing: 0.5px;
 }
 .btn-1:hover {
-    background: #f4b400;   
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-
+    background: var(--dorado-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.3px;
     border: none;
     width: fit-content;
-}
-
-.btn-1:hover {
-    background: #e0a000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-
 }
 
 .btn-:active {
@@ -674,9 +667,8 @@ header {
 }
 
 .btn-3 {
-
     display: inline-block;
-    background: #f4b400;  
+    background: var(--dorado);
     border: none;          /* 👈 quita la línea */
     outline: none;
     color: white;
@@ -692,22 +684,14 @@ header {
 }
 
 .btn-3:hover {
-    background: #f4b400;   
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-
+    background: var(--dorado-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.3px;
     border: none;
     width: fit-content;
-}
-
-.btn-3:hover {
-    background: #e0a000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-
 }
 
 .btn-3:active {
@@ -817,8 +801,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-
-    background: #6b6b6b;       
+    background: var(--dorado);
     padding: 10px 16px;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -827,7 +810,7 @@ header {
 .btn-4:hover,
 .btn-5:hover,
 .btn-6:hover {
-    background: #f4b400;        
+    background: var(--dorado-dark);
     color: white;
     transform: translateY(-3px);
 }

@@ -143,7 +143,7 @@
 }
 
 .carousel-btn:hover {
-    color: #C9A227;
+    color: var(--dorado, #f4b400);
     transform: translateY(-50%) scale(1.15);
 }
 
@@ -177,13 +177,13 @@
 }
 
 .carousel-dot.active {
-    background: #C9A227;
-    border-color: #C9A227;
+    background: var(--dorado, #f4b400);
+    border-color: var(--dorado, #f4b400);
     transform: scale(1.3);
 }
 
 .carousel-dot:hover {
-    background: #C9A227;
+    background: var(--dorado, #f4b400);
 }
 
 /* ===== PROYECTO INFO ===== */
@@ -260,7 +260,7 @@
 
 .btn-ver-mas {
     display: inline-block;
-    background: #C9A227;
+    background: var(--dorado, #f4b400);
     color: white;
     padding: 14px 40px;
     border-radius: 10px;
@@ -269,12 +269,12 @@
     font-size: 0.95em;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 2px solid #C9A227;
+    border: 2px solid var(--dorado, #f4b400);
 }
 
 .btn-ver-mas:hover {
-    background: #e0a000;
-    border-color: #e0a000;
+    background: var(--dorado-dark, #e0a000);
+    border-color: var(--dorado-dark, #e0a000);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(201, 162, 39, 0.3);
 }
@@ -556,7 +556,7 @@
 
 .btn-contacto {
     display: inline-block;
-    background: #C9A227;
+    background: var(--dorado, #f4b400);
     color: white;
     padding: 16px 50px;
     border-radius: 10px;
@@ -565,12 +565,12 @@
     font-size: 1em;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 2px solid #C9A227;
+    border: 2px solid var(--dorado, #f4b400);
 }
 
 .btn-contacto:hover {
-    background: #e0a000;
-    border-color: #e0a000;
+    background: var(--dorado-dark, #e0a000);
+    border-color: var(--dorado-dark, #e0a000);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(201, 162, 39, 0.3);
 }

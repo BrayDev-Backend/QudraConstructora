@@ -1,0 +1,7 @@
+# robots.txt for Qudra Constructora
+# Allow all crawlers
+User-agent: *
+Disallow:
+
+# Replace the URL below with your real site URL before deployment
+Sitemap: https://TU_DOMINIO/sitemap.xml

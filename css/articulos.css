@@ -54,6 +54,17 @@
     line-height: 1.3;
 }
 
+/* ===== IMÁGENES DEL ARTÍCULO ===== */
+.articulo-blog img,
+.articulo-imagen {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
 /* ===== PARRAFOS ===== */
 .articulo-blog p {
     font-size: 1.05em;

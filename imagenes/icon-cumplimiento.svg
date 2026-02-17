@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Icono Cumplimiento">
+  <rect x="8" y="8" width="104" height="104" rx="16" fill="#f3b300"/>
+  <g fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 30 C76 30, 90 38, 90 52 C90 74, 60 86, 60 86 C60 86, 30 74, 30 52 C30 38, 44 30, 60 30 Z" />
+    <path d="M40 56 L52 68 L80 40" stroke-width="4" />
+  </g>
+</svg>
