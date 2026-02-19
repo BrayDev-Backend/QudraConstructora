@@ -59,17 +59,18 @@ body {
 .icono-politica {
     width: 64px;
     height: 64px;
-    background: #FFC107;
-    border-radius: 50%;
+    background: #f4b400;
+    border-radius: 14px; 
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.22);
 }
 
 .icono-politica img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -99,7 +100,7 @@ body {
 }
 
 .politica-card ul li::marker {
-    color: #FFC107;
+    color: #f4b400;
 }
 
 
@@ -157,13 +158,13 @@ body {
 }
 
 .btn-doc:hover {
-    background: #e0a000;
+    background: #f4b400;
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    transform: scale(0.97); /* 👈 se contrae */
+    transform: scale(0.97); 
 }
 
 .btn-doc:active {
-    transform: scale(0.94); /* 👈 presión */
+    transform: scale(0.94); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 /* ===== MEDIA QUERIES POLÍTICAS ===== */

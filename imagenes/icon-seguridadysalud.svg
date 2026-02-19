@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Icono Seguridad y Salud">
-  <rect x="8" y="8" width="104" height="104" rx="16" fill="#f3b300"/>
-  <g fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M60 30 C74 30, 88 38, 88 52 C88 74, 60 86, 60 86 C60 86, 32 74, 32 52 C32 38, 46 30, 60 30 Z" />
-    <rect x="52" y="46" width="16" height="28" fill="none" stroke="#000" stroke-width="3" />
-    <line x1="46" y1="60" x2="74" y2="60" stroke="#000" stroke-width="3" />
-  </g>
-</svg>
