@@ -183,7 +183,6 @@ body::before {
 #menu{
 display: none;
 
-
 }
 
 .menu-icono{
@@ -221,7 +220,6 @@ header {
     margin-top: 40px;
 }
 
-
 .swiper-slide{
     margin-bottom: 50px;
     background-color: white;
@@ -258,7 +256,6 @@ header {
     margin: 0 auto;
 }
 
-
 .header-txt {
     max-width: 900px;
     text-align: center;
@@ -276,6 +273,16 @@ header {
     color: #0f172a;
 }
 
+.header-txt h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #f4b400;
+    margin: 20px auto 0;
+    border-radius: 4px;
+}
+
 .header-txt p {
     font-size: 1em;
     margin-bottom: 20px;
@@ -290,8 +297,6 @@ header {
     
     margin-top: -40px;
 }
-
-
 
 .sobre-nosotros {
     margin-top: 60px;
@@ -434,10 +439,6 @@ header {
     text-transform: uppercase;
 }
 
-
-
-
-
 .mision-vision-valores-container {
     max-width: 1400px;
 
@@ -530,7 +531,7 @@ header {
     opacity: 1;
 }
 
-/* ===== SECCIÓN PROYECTOS ===== */
+
 
 .main-menu {
     display: flex;
@@ -546,7 +547,7 @@ header {
 }
 
 #ubicacion {
-  padding-top: 10px; /* prueba con 80 o 60 */
+  padding-top: 10px; 
 }
 
 .ubicacion-item {
@@ -562,7 +563,7 @@ header {
     transform: translateY(-8px);
 }
 
-/* ===== ICONO CIRCULAR ===== */
+
 
 .ubicacion-image {
     width: 110px;
@@ -574,7 +575,7 @@ header {
     margin-bottom: 40px;
 }
 
-/* ===== TÍTULO ===== */
+
 
 .ubicacion-item h2 {
     font-size: 2.5em;
@@ -590,7 +591,7 @@ header {
     display: block;
     width: 80px;
     height: 4px;
-    background: #f4b400;
+    background: #d88900;
     margin: 20px auto 0;
     border-radius: 4px;
 }
@@ -601,7 +602,7 @@ header {
     display: inline-block;
     margin-top: 50px;
     padding: 16px 40px;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: #f4b400;
     color: white;
     border-radius: 15px;
     text-decoration: none;
@@ -631,8 +632,6 @@ header {
 
 
 
-
-
 .main-menu .form-container {
     margin-top: 120px !important;
 }
@@ -649,11 +648,11 @@ header {
     text-align: left;
 }
 
-/* Línea dorada decorativa debajo del título */
+
 .form-container h1 {
     text-align: center;
     font-size: 48px;
-    color: #1e2a3a;
+    color: black;
     margin-bottom: 15px;
     position: relative;
 }
@@ -662,7 +661,7 @@ header {
     content: "";
     width: 60px;
     height: 4px;
-    background: #f4b400;
+    background: #f4b400; 
     display: block;
     margin: 12px auto 0;
     border-radius: 3px;
@@ -675,7 +674,7 @@ header {
     margin-bottom: 50px;
 }
 
-/* Campos */
+
 .form-group {
     margin-bottom: 25px;
     display: flex;
@@ -685,7 +684,7 @@ header {
 .form-group label {
     margin-bottom: 8px;
     font-weight: 600;
-    color: #1e293b;
+    color: #0f172a;
 }
 
 .form-container input {
@@ -698,7 +697,7 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Focus elegante */
+
 .form-container input:focus {
     border-color: #f4b400;
     background: #ffffff;
@@ -706,13 +705,13 @@ header {
     outline: none;
 }
 
-/* Botón premium */
+
 .btn-3 {
     width: 100%;
     padding: 18px;
     border-radius: 18px;
     border: none;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background: #f4b400;
     color: #ffffff;
     font-size: 18px;
     font-weight: 600;
@@ -741,13 +740,12 @@ header {
     display: flex;
     flex-direction: column;
 }
-/* CONTENEDOR GENERAL */
+
 .asesoria-section {
     padding: 80px 10%;
     
 }
 
-/* Layout en dos columnas */
 .asesoria-contenedor {
     display: flex;
     align-items: center;
@@ -755,28 +753,56 @@ header {
     gap: 60px;
 }
 
-/* Imagen izquierda */
 .asesoria-imagen img {
     width: 100%;
     max-width: 500px;
+    height: auto;      
+    display: block;    
+}
+@media (max-width: 768px) {
+    .asesoria-contenedor {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .asesor {
+        text-align: center;
+    }
+
+    .asesor h2::after {
+        margin: 20px auto 0;  
+    }
 }
 
-/* Contenido derecho */
+
 .asesor {
     flex: 1;
     text-align: left;
 }
 
-/* Título grande */
+
 .asesor h2 {
-    font-size: 2.5em;   /* Igual que Contáctanos */
+    font-size: 2.5em;   
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 40px;
-    text-align: left; /* opcional si lo quieres alineado igual */
+    text-align: left; 
 }
 
-/* Cada línea (teléfono / correo) */
+.asesor h2::after {
+   
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #f4b400;
+    text-align: left;
+    margin-left: 150px;
+    border-radius: 3px;
+    margin: 15px 0 0 150px; 
+}
+
+
 .linea-item {
     display: flex;
     align-items: center;
@@ -789,9 +815,7 @@ header {
     border-bottom: 1px solid #e2e8f0;
 }
 
-/* Ícono */
 
-/* Texto pequeño superior */
 .mini-label {
     display: block;
     font-size: 0.8rem;
@@ -800,18 +824,18 @@ header {
     margin-bottom: 10px;
 }
 
-/* Número y correo grandes */
+
 .telefono,
 .email {
     color: #0f172a;
-    font-weight: 400;   /* quitar negrita */
-    font-size: 1.5em;   /* más pequeño */
+    font-weight: 400;   
+    font-size: 1.5em;   
     text-decoration: none;
 }
-/* Hover elegante */
+
 .telefono:hover,
 .email:hover {
-    color: #f4b400; /* dorado corporativo */
+    color: #f4b400;
 }
 
 

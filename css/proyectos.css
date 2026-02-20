@@ -1,31 +1,44 @@
-/* ===== MAIN PROYECTOS ===== */
-.main-proyectos {
-    padding-top: 100px;
-    padding-bottom: 60px;
-    min-height: calc(100vh - 100px);
-}
-
-/* ===== HEADER PROYECTOS ===== */
 .proyectos-header {
     text-align: center;
-    margin-bottom: 80px;
-    padding: 30px 20px;
+    padding: 100px 20px 60px 20px;
 }
 
+.proyectos-header {
+    text-align: center;
+    padding: 100px 20px 60px 20px;
+    position: relative;
+}
+
+
+/* TÍTULO */
 .proyectos-header h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 15px;
+    font-size: 3.2rem;      /* Tamaño del título */
+    font-weight: 700;       /* Grosor */
+    color: #0f172a;         /* Azul oscuro corporativo */
+    margin-bottom: 20px;    /* Espacio debajo del título */
 }
 
+/* SUBTÍTULO */
 .proyectos-header p {
-    font-size: 1.1em;
-    color: #475569;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
+    font-size: 1.3rem;      
+    font-weight: 400;       
+    color: #475569;        
+    max-width: 800px;       
+    margin: 0 auto;         
+    line-height: 1.6;       
 }
+
+.proyectos-header::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #d88900; /* dorado */
+    margin: 30px auto 0;
+    border-radius: 3px;
+}
+
+
 
 /* ===== PROYECTOS CONTAINER ===== */
 .proyectos-container {

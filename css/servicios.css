@@ -2,7 +2,7 @@
 .servicios-header {
     text-align: center;
     padding: 100px 20px 60px 20px;
-    background: #f5f5f5;
+    
 }
 
 .servicios-header h1 {
@@ -12,7 +12,7 @@
 }
 
 .servicios-header h1 span {
-    color: #d88900; /* dorado */
+    color: #d88900; 
 }
 
 .servicios-header p {
@@ -40,7 +40,7 @@
     gap: 40px;
 }
 .servicio-bloque {
-    background: white;
+    
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
@@ -158,7 +158,7 @@
     background: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     transition: all 0.4s ease;
     border: 1px solid transparent;
 }
@@ -178,13 +178,12 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
     transition: 0.4s ease;
+   
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0));
 }
 
-.servicio-bloque:hover .servicio-imagen::after {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
-}
+
 .servicio-imagen img {
     transition: 0.4s ease;
 }
