@@ -1021,7 +1021,7 @@ header {
     transform: translateY(0);
 }
 
-/* ===== MENÚ HAMBURGUESA ===== */
+
 #menu-toggle {
     display: none;
 }
@@ -1060,7 +1060,7 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Animación cuando el checkbox está activo */
+
 #menu-toggle:checked ~ .menu-label .hamburger {
     background: transparent;
 }
@@ -1088,12 +1088,16 @@ header {
 }
 
 #menu-toggle:checked ~ .nav-menus .menu-1 {
+    display: flex;
     flex-direction: column;
-    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    flex: none;
-    margin: 0;
-    order: 0;
+    background: rgba(40, 40, 40, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 20px 0;
+    z-index: 99;
 }
 
 #menu-toggle:checked ~ .nav-menus .menu-1 ul {
@@ -1146,10 +1150,12 @@ header {
     }
 }
 
-/* Tablets y móviles grandes (768px) */
+
 @media (max-width: 768px) {
     /* Menú */
     .menu {
+        display: flex;
+        align-items: center;
         padding: 10px 15px;
         border-radius: 0;
     }
@@ -1159,11 +1165,30 @@ header {
     }
 
     .logo-2 {
+        order: 1;
         height: 80px;
         max-height: 80px;
     }
+      .menu-2 {     
+        order: 2;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .menu-label { 
+        order: 3;
+    }
+
 
     .nav-menus {
+    display: flex;
+    align-items: center;
+}
+
+  
+    .nav-menus .menu-1 {
         display: none;
     }
 
@@ -1171,7 +1196,7 @@ header {
         padding-top: 110px;
     }
 
-    /* Carrusel */
+  
     .swiper {
         margin-top: 30px;
     }
@@ -1191,7 +1216,7 @@ header {
         display: none;
     }
 
-    /* Contenido Header */
+  
     .header-content {
         flex-direction: column;
         gap: 30px;
@@ -1214,7 +1239,7 @@ header {
         margin-bottom: 15px;
     }
 
-    /* Sobre nosotros */
+  
     .sobre-nosotros {
         max-width: 100%;
         flex-wrap: wrap;
@@ -1236,7 +1261,7 @@ header {
         font-size: 0.9em;
     }
 
-    /* Misión, Visión, Valores */
+    
     .mision-vision {
         margin-top: 0;
     }

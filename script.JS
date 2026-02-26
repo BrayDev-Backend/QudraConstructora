@@ -145,19 +145,45 @@ var todosLosProyectos = [
 // Inicializar Swiper solo si existe en la página
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof Swiper !== 'undefined') {
-        var swiper = new Swiper('.mySwiper', {
+       var swiper = new Swiper('.mySwiper', {
             slidesPerView: 1,
             spaceBetween: 30,
             grabCursor: true,
             loop: true,
+
+            speed: 700, 
             autoplay: {
-                delay: 1000,
+                delay: 1800, 
                 disableOnInteraction: false,
             },
+
             breakpoints: {
+
+                
                 991: {
                     slidesPerView: 3,
-                    spaceBetween: 30
+                    speed: 700,
+                    autoplay: {
+                        delay: 2000
+                    }
+                },
+
+                
+                768: {
+                    slidesPerView: 2,
+                    speed: 700,
+                    autoplay: {
+                        delay: 2500
+                    }
+                },
+
+               
+                0: {
+                    slidesPerView: 1,
+                    speed: 700,
+                    autoplay: {
+                        delay: 2500
+                    }
                 }
             }
         });
@@ -165,49 +191,37 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function enviarWhatsApp(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
 
-    const nombre = document.getElementById("nombre").value;
-    const telefono = document.getElementById("telefono").value;
-    const proyecto = document.getElementById("proyecto").value;
-    const correo = document.getElementById("correo").value;
+    function enviarWhatsApp(event) {
+        event.preventDefault(); // evitar que el form recargue la página
 
-    const mensaje = `Hola, soy ${nombre}.
-Teléfono: ${telefono}
-Correo: ${correo}
-Tipo de proyecto: ${proyecto}`;
+        const nombre = document.getElementById("nombre").value;
+        const telefono = document.getElementById("telefono").value;
+        const proyecto = document.getElementById("proyecto").value;
+        const correo = document.getElementById("correo").value;
 
-    const numeroWhatsApp = "573042271498";
+        const mensaje = `Hola, soy ${nombre}.\nTeléfono: ${telefono}\nCorreo: ${correo}\nTipo de proyecto: ${proyecto}`;
+        const numeroWhatsApp = "573042271498";
 
-    // Mostrar mensaje de éxito
-    mostrarMensajeExito();
+        // Abrir ventana inmediatamente (requerido por Safari)
+        const ventana = window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`, '_blank');
 
-    // Limpiar el formulario
-    document.querySelector('form').reset();
+        // Mostrar mensaje de éxito en la web
+        mostrarMensajeExito();
 
-    // Redirigir a WhatsApp después de 2 segundos
-    setTimeout(() => {
-        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-        window.open(url, "_blank");
-    }, 2000);
-}
+        // Limpiar formulario
+        document.getElementById('contactForm').reset();
 
-function mostrarMensajeExito() {
-    const mensaje = document.getElementById("mensajeExito");
-    mensaje.classList.add("activo");
-    
-    // Auto-cerrar después de 4 segundos
-    setTimeout(() => {
-        cerrarMensajeExito();
-    }, 4000);
-}
+        // Opcional: si quieres cerrar automáticamente la ventana de WhatsApp luego de un tiempo
+        // setTimeout(() => { ventana.close(); }, 5000);
+    }
 
-function cerrarMensajeExito() {
-    const mensaje = document.getElementById("mensajeExito");
-    mensaje.classList.remove("activo");
-}
+    // Bind del formulario
+    const form = document.getElementById('contactForm');
+    if (form) form.addEventListener('submit', enviarWhatsApp);
 
+});
 // ===== CARRUSEL PARA PROYECTOS =====
 function initializeCarousels() {
     const carousels = document.querySelectorAll('.carousel-container');
