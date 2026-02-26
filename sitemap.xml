@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Replace the <loc> values with your real domain before publishing -->
   <url>
-    <loc>https://TU_DOMINIO/index.html</loc>
+    <loc>https://qudraconstructora.com/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://TU_DOMINIO/servicios.html</loc>
+    <loc>https://qudraconstructora.com/servicios.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://TU_DOMINIO/proyectos.html</loc>
+    <loc>https://qudraconstructora.com/proyectos.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://TU_DOMINIO/blog.html</loc>
+    <loc>https://qudraconstructora.com/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://TU_DOMINIO/politicas.html</loc>
+    <loc>https://qudraconstructora.com/politicas.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
