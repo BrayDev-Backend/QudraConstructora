@@ -191,36 +191,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+function enviarWhatsApp(event) {
+    event.preventDefault();
 
-    function enviarWhatsApp(event) {
-        event.preventDefault(); // evitar que el form recargue la página
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const proyecto = document.getElementById("proyecto").value;
+    const correo = document.getElementById("correo").value;
 
-        const nombre = document.getElementById("nombre").value;
-        const telefono = document.getElementById("telefono").value;
-        const proyecto = document.getElementById("proyecto").value;
-        const correo = document.getElementById("correo").value;
+    const mensaje = `Hola, soy ${nombre}.
+Teléfono: ${telefono}
+Correo: ${correo}
+Tipo de proyecto: ${proyecto}`;
 
-        const mensaje = `Hola, soy ${nombre}.\nTeléfono: ${telefono}\nCorreo: ${correo}\nTipo de proyecto: ${proyecto}`;
-        const numeroWhatsApp = "573042271498";
+    const numeroWhatsApp = "573042271498";
 
-        // Abrir ventana inmediatamente (requerido por Safari)
-        const ventana = window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`, '_blank');
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;    
 
-        // Mostrar mensaje de éxito en la web
+    window.location.href = url;
+
+    if (typeof mostrarMensajeExito === "function") {
         mostrarMensajeExito();
-
-        // Limpiar formulario
-        document.getElementById('contactForm').reset();
-
-        // Opcional: si quieres cerrar automáticamente la ventana de WhatsApp luego de un tiempo
-        // setTimeout(() => { ventana.close(); }, 5000);
     }
 
-    // Bind del formulario
+    const form = document.getElementById('contactForm');
+    if (form) form.reset();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     if (form) form.addEventListener('submit', enviarWhatsApp);
-
 });
 // ===== CARRUSEL PARA PROYECTOS =====
 function initializeCarousels() {
