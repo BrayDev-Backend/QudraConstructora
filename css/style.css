@@ -1170,16 +1170,18 @@ header {
     justify-content: center;
     gap: 10px;
     order: 2;
-    transform: translateX(70%);
-}
-
-    .menu-label { 
-        order: 3;
-        display: flex;
-    }
+    margin-left: auto; /* push to right on small screens */
+    transform: none; /* avoid sliding off-screen */
+  }
 
     .nav-menus .menu-1 {
         display: none;
+    }
+
+    /* hamburger button visible on small screens */
+    .menu-label {
+        order: 3;
+        display: flex !important;
     }
 
     #menu-toggle:checked ~ .nav-menus .menu-1 {

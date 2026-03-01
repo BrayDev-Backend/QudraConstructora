@@ -174,3 +174,14 @@ body {
     transform: scale(0.94);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+/* Ensure hamburger menu is visible on small screens */
+@media (max-width: 768px) {
+    .menu > .menu-label {
+        display: flex !important;
+        flex-direction: column !important;
+        order: 3 !important;
+        z-index: 101 !important;
+        cursor: pointer !important;
+    }
+}
